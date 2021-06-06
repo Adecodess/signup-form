@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebookSquare, FaEye } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import useForm from "./useForm";
+import React, { useState } from 'react'
+import { FcGoogle } from 'react-icons/fc'
+import { FaFacebookSquare, FaEye } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import useForm from './useForm'
 
 const Signup = () => {
-  // const { handleChange, person, handleSubmit } = useForm();
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { handleChange, person, handleSubmit } = useForm()
+  // const [username, setUsername] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  // };
   return (
     <main>
       <h3>healthcare</h3>
@@ -25,8 +25,8 @@ const Signup = () => {
             name="username"
             placeholder="username"
             className="form-input"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={person.username}
+            onChange={handleChange}
           />
         </div>
         <div className="form-control">
@@ -37,8 +37,8 @@ const Signup = () => {
             name="email"
             placeholder="email"
             className="form-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={person.email}
+            onChange={handleChange}
           />
         </div>
 
@@ -50,8 +50,8 @@ const Signup = () => {
             name="password"
             placeholder="password"
             className="form-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={person.password}
+            onChange={handleChange}
           />
         </div>
         <button className="sign-btn" type="submit">
@@ -62,7 +62,7 @@ const Signup = () => {
         </Link>
       </form>
     </main>
-  );
-};
+  )
+}
 
-export default Signup;
+export default Signup
