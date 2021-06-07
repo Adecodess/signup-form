@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const Home = () => {
   return (
     <main className="container">
       <article>
-        <h1>evon</h1>
-        <p>discover upcoming events new you</p>
+        <h1>healthcare</h1>
         <div className="btn-container">
           <Link to="/signup" className="signup-btn">
             Sign Up
