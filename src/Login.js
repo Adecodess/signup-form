@@ -19,6 +19,8 @@ const Login = () => {
             value={person.username}
             onChange={handleChange}
           />
+          {userData.username && <p>username does not match</p>}
+          <p></p>
         </div>
 
         <div className="form-control">
@@ -32,15 +34,14 @@ const Login = () => {
             value={person.password}
             onChange={handleChange}
           />
+          {userData.password && <p>username does not match</p>}
         </div>
-        <button className="sign-btn" type="submit">
-          Sign Up
-        </button>
+
         <Link
-          to={userData.username && userData.password ? "/dashboard" : "/login"}
+          to={userData.username && userData.password ? "/dashboard" : "/signup"}
           className="log-btn"
         >
-          <span>Already have an account? </span> Log in
+          <span>Already have an account? </span> Login
           {!userData && "error"}
         </Link>
       </form>

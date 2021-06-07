@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import { FcGoogle } from 'react-icons/fc'
-import { FaFacebookSquare, FaEye } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
-import useForm from './useForm'
+import React, { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookSquare, FaEye } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import useForm from "./useForm";
+import validate from "./validateInfo";
 
 const Signup = () => {
-  const { handleChange, person, handleSubmit, userData } = useForm()
+  const { handleChange, person, handleSubmit, errors, userData } =
+    useForm(validate);
   // const [username, setUsername] = useState("");
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -28,6 +30,7 @@ const Signup = () => {
             value={person.username}
             onChange={handleChange}
           />
+          {errors.username && <p>{errors.username}</p>}
         </div>
         <div className="form-control">
           <label htmlFor="email"></label>
@@ -40,6 +43,7 @@ const Signup = () => {
             value={person.email}
             onChange={handleChange}
           />
+          {errors.email && <p>{errors.email}</p>}
         </div>
 
         <div className="form-control">
@@ -53,20 +57,24 @@ const Signup = () => {
             value={person.password}
             onChange={handleChange}
           />
+          {errors.password && <p>{errors.password}</p>}
         </div>
-        <button className="sign-btn" type="submit">
-          Sign Up
-        </button>
+        <Link to="/signup">
+          <button className="sbtn" type="submit">
+            Sign Up
+          </button>
+        </Link>
+
         <Link
-          to={userData.username && userData.password ? '/login' : '/signup'}
+          to={userData.username && userData.password ? "/login" : "/signup"}
           className="log-btn"
         >
           <span>Already have an account? </span> Log in
-          {!userData && 'error'}
+          {!userData && "errors"}
         </Link>
       </form>
     </main>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;

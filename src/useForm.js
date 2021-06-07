@@ -1,59 +1,49 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
-const useForm = () => {
+const useForm = (validate) => {
   const [person, setPerson] = useState({
-    username: '',
-    email: '',
-    password: '',
-  })
+    username: "",
+    email: "",
+    password: "",
+  });
 
   // const navigation =()=>{
   const userData = {
     username: person.username,
     email: person.email,
     password: person.password,
-  }
+  };
 
   //    if ((userData[0].username, userData[0].password, userData[0].email)) {
 
   //    }
   // }
 
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     // const name = e.target.name;
     // console.log(name);
     // console.log(name, value);
     setPerson({
       ...person,
       [name]: value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // const userData = [
-    //   {
-    //     username: person.username,
-    //     email: person.email,
-    //     password: person.password,
-    //   },
-    // ]
-    // if(userData[0].username, userData[0].password,userData[0].email){
+    e.preventDefault();
+    setErrors(validate(person));
 
-    // }
-    // console.log(userData[0])
-    // console.log(person.email, person.password, person.username)
-    // setPerson({
-    //   username: '',
-    //   email: '',
-    //   password: '',
-    // })
-  }
+    setPerson({
+      username: "",
+      email: "",
+      password: "",
+    });
+  };
 
-  return { handleChange, person, handleSubmit, userData }
-}
+  return { handleChange, person, handleSubmit, userData, errors, validate };
+};
 
-export default useForm
+export default useForm;
