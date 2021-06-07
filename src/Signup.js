@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import useForm from './useForm'
 
 const Signup = () => {
-  const { handleChange, person, handleSubmit } = useForm()
+  const { handleChange, person, handleSubmit, userData } = useForm()
   // const [username, setUsername] = useState("");
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -57,8 +57,12 @@ const Signup = () => {
         <button className="sign-btn" type="submit">
           Sign Up
         </button>
-        <Link to="/login" className="log-btn">
+        <Link
+          to={userData.username && userData.password ? '/login' : '/signup'}
+          className="log-btn"
+        >
           <span>Already have an account? </span> Log in
+          {!userData && 'error'}
         </Link>
       </form>
     </main>

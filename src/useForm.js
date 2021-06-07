@@ -7,6 +7,18 @@ const useForm = () => {
     password: '',
   })
 
+  // const navigation =()=>{
+  const userData = {
+    username: person.username,
+    email: person.email,
+    password: person.password,
+  }
+
+  //    if ((userData[0].username, userData[0].password, userData[0].email)) {
+
+  //    }
+  // }
+
   const [errors, setErrors] = useState({})
 
   const handleChange = (e) => {
@@ -22,15 +34,26 @@ const useForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(person.email, person.password, person.username)
-    setPerson({
-      username: '',
-      email: '',
-      password: '',
-    })
+    // const userData = [
+    //   {
+    //     username: person.username,
+    //     email: person.email,
+    //     password: person.password,
+    //   },
+    // ]
+    // if(userData[0].username, userData[0].password,userData[0].email){
+
+    // }
+    // console.log(userData[0])
+    // console.log(person.email, person.password, person.username)
+    // setPerson({
+    //   username: '',
+    //   email: '',
+    //   password: '',
+    // })
   }
 
-  return { handleChange, person, handleSubmit }
+  return { handleChange, person, handleSubmit, userData }
 }
 
 export default useForm
