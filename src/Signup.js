@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebookSquare, FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import useForm from "./useForm";
 import validate from "./validateInfo";
@@ -16,7 +14,7 @@ const Signup = () => {
   //   e.preventDefault();
   // };
   return (
-    <main>
+    <article>
       <h3>healthcare</h3>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-control">
@@ -73,7 +71,7 @@ const Signup = () => {
           {!userData && "errors"}
         </Link>
       </form>
-    </main>
+    </article>
   );
 };
 

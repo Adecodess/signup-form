@@ -15,7 +15,7 @@ const Home = () => {
             Log in
           </Link>
         </div>
-        <button className="skipbtn">skip for now</button>
+        {/* <button className="skipbtn">skip for now</button> */}
       </article>
     </main>
   );
