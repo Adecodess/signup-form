@@ -1,10 +1,8 @@
-import "./Main.css";
+import "../main/Main.css";
 import hello from "../../assets/hello.png";
 import Chart from "../charts/Chart";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 
-const Main = () => {
+const Driver = () => {
   return (
     <section>
       <div className="main__container">
@@ -12,9 +10,10 @@ const Main = () => {
           <img src={hello} alt="hello" />
           <div className="main__greeting">
             <h1>Hello ES HEALTHCARE</h1>
-            <p>Welcome to Your Admin Dashboard</p>
+            <p>Welcome to Driver Dashboard</p>
           </div>
         </div>
+
         <div className="main__cards">
           <div className="card">
             <i className="fa fa-user-o fa-2x text-lightblue"></i>
@@ -48,6 +47,7 @@ const Main = () => {
             </div>
           </div>
         </div>
+
         <div className="charts">
           <div className="charts__left">
             <div className="charts__left__title">
@@ -95,4 +95,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Driver;
