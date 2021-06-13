@@ -7,7 +7,11 @@ const Patient = () => {
     PatientName: "",
     PatientAge: "",
     PatientProblem: "",
-    PatientPrescription: "",
+    MaritalStatus: "",
+    DOB: "",
+    Sex: "",
+    Address: "",
+    RegistrationDate: "",
   });
   const [alert, setAlert] = useState({
     show: false,

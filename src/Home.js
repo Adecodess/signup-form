@@ -2,20 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
-    <main className="container">
-      <article>
-        <h1>healthcare</h1>
+    <main className="home-container">
+      <article className="home">
+        <h1 className="home-title"> Welcome to ESHealthcare</h1>
         <div className="btn-container">
-          <Link to="/signup" className="signup-btn">
-            Sign Up
+          <Link to="/signup" className="signin-btn">
+            Sign in
           </Link>{" "}
-          <br />
-          <br />
-          <Link to="/login" className="login-btn">
-            Log in
-          </Link>
         </div>
-        {/* <button className="skipbtn">skip for now</button> */}
       </article>
     </main>
   );

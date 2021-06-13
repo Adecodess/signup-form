@@ -10,46 +10,36 @@ body {
 
   background: #a5aaad;
   line-height: 1.4;
-  font-size: 1rem;
-  font-weight: 300;
+
   width: 100%;
   height: 100%;
 }
 
-/* Sign-up/Login page */
-.container {
+/* homepage */
+.home-container {
   background-color: turquoise;
   margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25em;
-  height: 40em;
+  height: 15em;
 }
-article {
+.home {
   text-align: center;
-  padding-top: 15em;
+  margin-top: 10em;
 }
-.container h1 {
-  text-transform: uppercase;
-}
-.container p {
+
+.home-title {
   text-transform: capitalize;
-}
-.skipbtn {
-  color: #111;
-  background: #ff0157;
-  padding: 10px 25px;
-  padding: 10px 15px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-transform: capitalize;
-  font-size: 1em;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 .btn-container {
-  display: block;
-  margin-top: 7em;
+  margin-bottom: 10em;
 }
-.signup-btn {
+.signin-btn {
   text-decoration: none;
   color: #fff;
   background: #ff0157;
@@ -59,57 +49,72 @@ article {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.signup-btn:hover {
-  letter-spacing: 6px;
-}
-.login-btn {
-  text-transform: capitalize;
-  text-decoration: none;
-  background: #ff0157;
-  color: #fff;
-  text-align: center;
-  padding: 10px 146px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-.login-btn:hover {
+.signin-btn:hover {
   letter-spacing: 6px;
 }
 
 /* sign-up */
 
-article {
-  /* display: flex;
+.signup-form {
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  text-align: center;
-  margin-top: 10em;
+  align-items: center;
+  margin: 9rem auto;
 }
 
-article h3 {
-  color: #fff;
+.signup-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+  color: hsl(209, 61%, 16%);
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
   text-transform: capitalize;
-  font-weight: 600;
-  font-size: 1.5em;
-  padding-bottom: 1.5em;
 }
 
-.form-input {
-  width: 40%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+.formm .avatar {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 50px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #70c5c0;
+  padding: 15px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.formm .avatar img {
+  width: 100%;
+  height: auto;
 }
 
-.form-input::placeholder {
+.formm-input {
+  background: #fff;
+  max-width: 450px;
+  margin: 10px auto;
+  padding: 0.8rem 6rem;
+  border-radius: 0.25rem;
+}
+
+.formm-input::placeholder {
   color: #111;
-  font-weight: 600;
-  font-size: 1em;
-  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.formm-control {
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+  padding-right: 2em;
 }
 
-.form-control p {
+.formm-control p {
   color: red;
 }
 
@@ -130,12 +135,53 @@ article h3 {
   color: #fff;
 }
 
+/* login */
+.login-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5em;
+  color: hsl(209, 61%, 16%);
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+}
+
+.login-form {
+  background: #fff;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+}
+.login-form-control p {
+  color: red;
+  margin-left: 1em;
+  text-transform: capitalize;
+}
+.login-form input {
+  background: hsl(210, 36%, 96%);
+  border-color: transparent;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 10em;
+}
+.login-form-control {
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+
 .log-btn {
   text-decoration: none;
-  color: #fff;
+  color: #222;
   transition: all 0.3s ease;
   cursor: pointer;
-  padding-top: 2em;
+  margin-top: 3em;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 .log-btn:hover {
@@ -203,156 +249,117 @@ article h3 {
 }
 
 /* media query */
-@media only screen and (max-width: 991px) {
-  .container {
+@media only screen and (max-width: 992px) {
+  .home-container {
+    height: 25em;
+    margin-right: 20em;
+    padding-top: 3em;
+    margin-right: 5em auto;
+  }
+
+  .signin-btn:hover {
+    letter-spacing: 3px;
+  }
+
+  .signup-form {
     margin: 20rem auto;
   }
-  article {
-    padding-top: 10em;
-    margin-right: 3em;
-  }
-  .btn-container {
-    margin-bottom: 4em;
-  }
-  h1 {
-    margin-bottom: 4em;
-  }
-  .signup-btn {
-    padding: 10px 65px;
-  }
 
-  .signup-btn:hover {
-    letter-spacing: 3px;
-  }
-  .login-btn {
-    padding: 10px 69px;
-  }
-  .login-btn:hover {
-    letter-spacing: 3px;
-  }
-  main h3 {
-    font-weight: 700;
-    font-size: 5em;
-  }
-
-  main {
-    margin-top: 25em;
-  }
-
-  .form-input {
-    width: 70%;
-    padding: 20px 35px;
-    margin: 12px 0;
-  }
-
-  .form-input::placeholder {
-    font-weight: 700;
-    font-size: 2em;
-  }
-
-  .form-control p {
-    color: red;
-    font-size: 3em;
-  }
-  .sbtn {
-    margin: 3em;
-    padding: 25px 45px;
+  .signup-title {
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.2em;
   }
 
-  .sbtn:hover {
-    letter-spacing: 8px;
-  }
-  .log-btn {
-    font-weight: 700;
-    font-size: 2em;
+  .formm .avatar {
+    top: 200px;
   }
 
-  .log-btn:hover {
-    letter-spacing: 6px;
+  .formm-input::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+  }
+  .login-title {
+    margin-top: 9em;
   }
 
-  @media only screen and (max-width: 978px) {
-    .dash-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.2fr 3fr;
-      grid-template-areas:
-        "nav"
-        "main";
-    }
+  .login-form {
+    margin: 3em auto;
+    margin-left: 15em;
   }
 
-  @media only screen and (max-width: 480px) {
-    .container {
-      margin: 15rem auto;
-    }
+  .login-form-input::placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
 
-    article h1 {
-      margin-top: 1em;
-    }
-    .btn-container {
-      margin-bottom: 2em;
-      margin-left: 1em;
-    }
-    .skipbtn {
-      padding: 10px 20px;
-      margin-left: 15px;
-    }
-    .signup-btn {
-      padding: 10px 75px;
-    }
+  /* .login-form input {
+  background: hsl(210, 36%, 96%);
+  border-color: transparent;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  margin-right: 10em;
+} */
+  /* .login-form-control {
+  margin: 0.5rem 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+} */
 
-    .signup-btn:hover {
-      letter-spacing: 5px;
-    }
-    .login-btn {
-      padding: 10px 79px;
-    }
-    .login-btn:hover {
-      letter-spacing: 5px;
-    }
-    main h3 {
-      font-weight: 500;
-      font-size: 3em;
-    }
+  /* .log-btn {
+  text-decoration: none;
+  color: #222;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 3em;
+  align-items: center;
+  text-transform: capitalize;
+} */
 
-    main {
-      margin-top: 15em;
-    }
+  /* .log-btn:hover {
+  letter-spacing: 3px;
+  color: bisque;
+} */
+}
 
-    .form-input {
-      width: 60%;
-      padding: 20px 35px;
-      margin: 12px 0;
-    }
+@media only screen and (max-width: 978px) {
+  .dash-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "nav"
+      "main";
+  }
+}
 
-    .form-input::placeholder {
-      font-weight: 400;
-      font-size: 1em;
-    }
+@media only screen and (max-width: 480px) {
+  .home-container {
+    margin: 10rem auto;
+    height: 100%;
+  }
+  .home {
+    margin-bottom: 10em;
+  }
 
-    .form-control p {
-      color: red;
-      font-size: 1em;
-    }
-    .sbtn {
-      padding: 15px 30px;
-      font-weight: 400;
-      font-size: 1em;
-      margin-left: 1em;
-    }
+  .home-title {
+    margin-bottom: 4em;
+    margin-right: 20px;
+  }
 
-    .sbtn:hover {
-      letter-spacing: 5px;
-    }
-    .log-btn {
-      font-weight: 500;
-      font-size: 1em;
-    }
+  .signin-btn {
+    padding: 10px 70px;
+  }
+  .formm-input {
+    max-width: 450px;
+    padding: 0.8rem 4rem;
+  }
+  .login-title {
+    margin-top: 15em;
+  }
 
-    .log-btn:hover {
-      letter-spacing: 5px;
-    }
+  .login-form {
+    margin: 5em auto;
   }
 }

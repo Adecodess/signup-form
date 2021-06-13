@@ -6,35 +6,36 @@ const Login = () => {
   const { handleChange, person, handleSubmit, userData } = useForm();
   return (
     <main>
-      <h3>healthcare</h3>
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="form-control">
+      <h3 className="login-title">ES healthcare</h3>
+      <form className="login-form" onSubmit={handleSubmit}>
+        <div className="login-form-control">
           <label htmlFor="username"></label>
           <input
             type="text"
             id="username"
             name="username"
             placeholder="username"
-            className="form-input"
+            className="login-form-input"
+            required
             value={person.username}
             onChange={handleChange}
           />
           {userData.username && <p>username does not match</p>}
-          <p></p>
         </div>
 
-        <div className="form-control">
+        <div className="login-form-control">
           <label htmlFor="password"></label>
           <input
             type="password"
             id="password"
             name="password"
             placeholder="password"
-            className="form-input"
+            className="login-form-input"
+            required
             value={person.password}
             onChange={handleChange}
           />
-          {userData.password && <p>username does not match</p>}
+          {userData.password && <p>password does not match</p>}
         </div>
 
         <Link

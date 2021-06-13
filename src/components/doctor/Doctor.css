@@ -84,6 +84,7 @@
 }
 
 /* Pharmacist Form */
+
 .form {
   background: #fff;
   max-width: 620px;
@@ -151,11 +152,19 @@
 }
 
 /* section */
-.article {
+/* .article {
   padding: 5rem 0;
 
   width: 100vw;
   height: 40vh;
+} */
+
+.driver-form {
+  padding: 5rem 0;
+  margin: 0 auto;
+  width: 100vw;
+  margin-left: 5em;
+  /* height: 40vh; */
 }
 
 @media only screen and (max-width: 855px) {
@@ -167,7 +176,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .article {
-    width: 95vw;
+  .driver-form {
+    width: 100vw;
   }
 }

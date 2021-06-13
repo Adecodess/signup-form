@@ -1,4 +1,4 @@
-import "../main/Main.css";
+import "../doctor/Doctor.css";
 import React, { useState } from "react";
 import "../patient/Patient.css";
 import Alert from "../Alert/Alert";
@@ -9,8 +9,8 @@ const Driver = () => {
   const [people, setPeople] = useState({
     PatientName: "",
     PatientAge: "",
-    PatientProblem: "",
-    PatientPrescription: "",
+    Sex: "",
+    Address: "",
   });
   const [alert, setAlert] = useState({
     show: false,
@@ -30,11 +30,7 @@ const Driver = () => {
       !people.PatientName &&
       !people.PatientAge &&
       !people.Sex &&
-      !people.DOB &&
-      !people.MaritalStatus &&
-      !people.RegistrationDate &&
-      !people.Address &&
-      !people.PatientProblem
+      !people.Address
     ) {
       // display alert
       showAlert(true, "danger", "please enter a value");
@@ -49,11 +45,7 @@ const Driver = () => {
       setPeople({
         PatientName: "",
         PatientAge: "",
-        PatientProblem: "",
         Sex: "",
-        DOB: "",
-        MaritalStatus: "",
-        RegistrationDate: "",
         Address: "",
       });
     }
@@ -71,8 +63,8 @@ const Driver = () => {
           <p>Welcome to Ambulance Dashboard</p>
         </div>
       </div>
-      <article className="patient-form">
-        <p className="titleText"> new patient registration</p>
+      <article className="driver-form">
+        <p className="titleText"> order an ambulance</p>
         <form className="form" onSubmit={handleSubmitt}>
           {alert.show && <Alert {...alert} removeAlert={showAlert} />}
           <div className="form-control">
@@ -99,43 +91,7 @@ const Driver = () => {
               onChange={handleChangee}
             />
           </div>
-          <div className="form-control">
-            <label htmlFor="Problem">Problem: </label>
-            <input
-              type="text"
-              placeholder="patient problem"
-              id="PatientProblem"
-              name="PatientProblem"
-              required
-              value={people.PatientProblem}
-              onChange={handleChangee}
-            />
-          </div>
 
-          <div className="form-control">
-            <label htmlFor="marital status">Marital Status: </label>
-            <input
-              type="text"
-              placeholder="marital status"
-              id="MaritalStatus"
-              name="MaritalStatus"
-              required
-              value={people.MaritalStatus}
-              onChange={handleChangee}
-            />
-          </div>
-          <div className="form-control">
-            <label htmlFor="D.O.B">D.O.B: </label>
-            <input
-              type="date"
-              placeholder="date of birth"
-              id="DOB"
-              name="DOB"
-              required
-              value={people.DOB}
-              onChange={handleChangee}
-            />
-          </div>
           <div className="form-control">
             <label htmlFor="sex">Sex: </label>
             <input
@@ -160,18 +116,7 @@ const Driver = () => {
               onChange={handleChangee}
             />
           </div>
-          <div className="form-control">
-            <label htmlFor="Registration Date">Registration Date: </label>
-            <input
-              type="date"
-              placeholder="Registration Date"
-              id="RegistrationDate"
-              name="RegistrationDate"
-              required
-              value={people.RegistrationDate}
-              onChange={handleChangee}
-            />
-          </div>
+
           <button className="pharma-btn" type="submit">
             Submit
           </button>

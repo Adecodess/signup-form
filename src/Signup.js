@@ -6,70 +6,76 @@ import validate from "./validateInfo";
 const Signup = () => {
   const { handleChange, person, handleSubmit, errors, userData } =
     useForm(validate);
-  // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  // };
   return (
-    <article>
-      <h3>healthcare</h3>
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="form-control">
+    <article className="signup-form">
+      <form className="formm" onSubmit={handleSubmit}>
+        <h3 className="signup-title">ES healthcare</h3>
+        <div className="avatar">
+          <img
+            src="https://www.globalcincinnati.org/wp-content/uploads/2017/10/icon_membership_individual.png"
+            alt="vatar"
+          />
+        </div>
+        <div className="formm-control">
           <label htmlFor="username"></label>
           <input
             type="text"
             id="username"
             name="username"
             placeholder="username"
-            className="form-input"
+            className="formm-input"
+            required
             value={person.username}
             onChange={handleChange}
           />
           {errors.username && <p>{errors.username}</p>}
         </div>
-        <div className="form-control">
+        <div className="formm-control">
           <label htmlFor="email"></label>
           <input
             type="email"
             id="email"
             name="email"
             placeholder="email"
-            className="form-input"
+            className="formm-input"
+            required
             value={person.email}
             onChange={handleChange}
           />
           {errors.email && <p>{errors.email}</p>}
         </div>
 
-        <div className="form-control">
+        <div className="formm-control">
           <label htmlFor="password"></label>
           <input
             type="password"
             id="password"
             name="password"
             placeholder="password"
-            className="form-input"
+            className="formm-input"
+            required
             value={person.password}
             onChange={handleChange}
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
-        <Link to="/signup">
-          <button className="sbtn" type="submit">
-            Sign Up
-          </button>
-        </Link>
 
-        <Link
-          to={userData.username && userData.password ? "/login" : "/signup"}
-          className="log-btn"
-        >
-          <span>Already have an account? </span> Log in
-          {!userData && "errors"}
-        </Link>
+        <div className="all-btn">
+          <Link to="/signup">
+            <button className="sbtn" type="submit">
+              Sign Up
+            </button>
+          </Link>
+
+          <Link
+            to={userData.username && userData.password ? "/login" : "/signup"}
+            className="log-btn"
+          >
+            <span>Already have an account? </span> Log in
+            {!userData && "errors"}
+          </Link>
+        </div>
       </form>
     </article>
   );
