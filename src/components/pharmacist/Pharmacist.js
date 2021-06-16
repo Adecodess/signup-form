@@ -102,63 +102,102 @@ const Pharmacist = () => {
           </div>
         </div>
       </div>
-      <article className="article">
-        <p className="title">patient form</p>
-        <form className="form" onSubmit={handleSubmitt}>
-          {alert.show && <Alert {...alert} removeAlert={showAlert} />}
-          <div className="form-control">
-            <label htmlFor="Name">Name: </label>
-            <input
-              type="text"
-              placeholder="patient name"
-              id="PatientName"
-              name="PatientName"
-              required
-              value={people.PatientName}
-              onChange={handleChangee}
+      <div className="all-cards">
+        <div className="cards">
+          <div className="cards1">
+            <div className="cards-text">
+              <h1>new arrival</h1>
+            </div>
+          </div>
+        </div>
+        <div className="cards">
+          <div className="cards2">
+            <div className="cards-text">
+              <h1>daily statistics</h1>
+            </div>
+          </div>
+        </div>
+        <div className="cards">
+          <div className="cards3">
+            <div className="cards-text">
+              <h1>doctor's prescription</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pharma-content">
+        <article className="article">
+          <form className="form" onSubmit={handleSubmitt}>
+            <p className="pharma-title">patient form</p>
+            {alert.show && <Alert {...alert} removeAlert={showAlert} />}
+            <div className="form-control">
+              <label htmlFor="Name">Name: </label>
+              <input
+                type="text"
+                placeholder="patient name"
+                id="PatientName"
+                name="PatientName"
+                required
+                value={people.PatientName}
+                onChange={handleChangee}
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="Age">Age: </label>
+              <input
+                type="number"
+                placeholder="patient age"
+                id="PatientAge"
+                name="PatientAge"
+                required
+                value={people.PatientAge}
+                onChange={handleChangee}
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="Problem">Problem: </label>
+              <input
+                type="text"
+                placeholder="patient problem"
+                id="PatientProblem"
+                name="PatientProblem"
+                required
+                value={people.PatientProblem}
+                onChange={handleChangee}
+              />
+            </div>
+            <div className="form-control">
+              <label htmlFor="Prescription">Prescription: </label>
+              <input
+                type="text"
+                placeholder="prescription from the doctor"
+                id="PatientPrescription"
+                name="PatientPrescription"
+                required
+                value={people.PatientPrescription}
+                onChange={handleChangee}
+              />
+            </div>
+            <button className="pharma-btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </article>
+        <div className="left-content">
+          <div className="pharma-avatar">
+            <img
+              src="https://www.globalcincinnati.org/wp-content/uploads/2017/10/icon_membership_individual.png"
+              alt="avatar"
             />
           </div>
-          <div className="form-control">
-            <label htmlFor="Age">Age: </label>
-            <input
-              type="number"
-              placeholder="patient name"
-              id="PatientAge"
-              name="PatientAge"
-              required
-              value={people.PatientAge}
-              onChange={handleChangee}
-            />
+          <div className="pharm-name">
+            <h1 className="pharm-text">Welcome Pharm James</h1>
           </div>
-          <div className="form-control">
-            <label htmlFor="Problem">Problem: </label>
-            <input
-              type="text"
-              placeholder="patient problem"
-              id="PatientProblem"
-              name="PatientProblem"
-              required
-              value={people.PatientProblem}
-              onChange={handleChangee}
-            />
-          </div>
-          <div className="form-control">
-            <label htmlFor="Prescription">Prescription: </label>
-            <input
-              type="text"
-              placeholder="prescription from the doctor"
-              id="PatientPrescription"
-              name="PatientPrescription"
-              required
-              value={people.PatientPrescription}
-              onChange={handleChangee}
-            />
-          </div>
-          <button className="pharma-btn" type="submit">
-            Submit
+          <button className="pharm-btn" type="submit">
+            Log Out
           </button>
-        </form>
-      </article>
+        </div>
+      </div>
     </section>
   );
 };

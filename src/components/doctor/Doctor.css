@@ -85,7 +85,7 @@
 
 /* Pharmacist Form */
 
-.form {
+.forrm {
   background: #fff;
   max-width: 620px;
   margin: 0 auto;
@@ -93,7 +93,7 @@
   padding: 1rem 2rem;
   border-radius: 0.25rem;
 }
-.form input {
+.forrm input {
   background: hsl(210, 36%, 96%);
   border-color: transparent;
   border-radius: 0.25rem;
@@ -103,36 +103,38 @@
   padding: 6px;
 }
 
-.form label {
+.forrm label {
   text-transform: capitalize;
   color: #222;
   font-size: 1rem;
   font-weight: 400;
 }
-.form-control {
+.forrm-control {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.form input::placeholder {
+.forrm input::placeholder {
   text-transform: capitalize;
   color: hsl(210, 22%, 49%);
   font-size: 0.8rem;
 }
-.title {
+.forrm p {
   margin-bottom: 10px;
   color: hsl(209, 61%, 16%);
   letter-spacing: 2px;
   transition: all 0.3s linear;
   text-transform: capitalize;
+  text-align: center;
 }
-.pharma-btn {
+.doctor-btn {
   display: inline-block;
   background: #222;
   color: #fff;
   border-color: transparent;
   margin-top: 1rem;
+  margin-left: 2em;
   letter-spacing: 0.1rem;
   padding: 0.15rem 0.25rem;
   text-transform: capitalize;
@@ -145,38 +147,217 @@
   text-transform: uppercase;
 }
 
-.pharma-btn:hover {
+.doctor-btn:hover {
   color: #222;
   background: #fff;
   letter-spacing: 4px;
 }
 
-/* section */
-/* .article {
-  padding: 5rem 0;
-
-  width: 100vw;
-  height: 40vh;
-} */
-
-.driver-form {
+.forrm {
   padding: 5rem 0;
   margin: 0 auto;
   width: 100vw;
   margin-left: 5em;
-  /* height: 40vh; */
 }
 
-@media only screen and (max-width: 855px) {
+.doctor-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftt-content {
+  width: 15em;
+  height: 22em;
+  margin-top: 5em;
+  border-radius: 2px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  border: 2px solid #222;
+  margin-left: 2em;
+}
+
+.doctor-avatar {
+  width: 20px;
+}
+.doctor-avatar img {
+  width: 7em;
+  height: auto;
+  margin-left: 4em;
+  padding-top: 1em;
+}
+.doctor-name {
+  text-align: center;
+}
+.doctor-text {
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: capitalize;
+}
+.doc-btn {
+  margin-left: 7em;
+  text-transform: capitalize;
+  background: #ff0157;
+  color: #111;
+  padding: 10px 25px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 10em;
+}
+.doc-btn:hover {
+  color: #222;
+  background: #fff;
+  letter-spacing: 4px;
+}
+
+.right-content {
+  width: 15em;
+  height: 22em;
+  /* background: #155724; */
+  margin-top: 5em;
+  border-radius: 2px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  border: 2px solid #222;
+  margin-left: 2em;
+  /* margin: 5em auto; */
+}
+.health-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.health-text h1 {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1em;
+  padding-top: 1em;
+}
+
+.bt-health {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13em;
+}
+
+.health-btn {
+  /* margin-left: 7em; */
+  text-transform: capitalize;
+  background: #ff0157;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+.health-btn:hover {
+  letter-spacing: 6px;
+  background: grey;
+  color: #fff;
+}
+
+.alll-cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em;
+}
+.cards {
+  border: 1.5px solid #222;
+  padding: 8px;
+}
+.cards-text h1 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 992px) {
   .main__cards {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 0;
   }
+  .doctor-content {
+    height: 40em;
+    margin-top: 5em;
+  }
+  .forrm {
+    width: 22em;
+    /* height: 30em; */
+  }
+  .doc-btn {
+    margin-top: 12em;
+  }
+  .leftt-content {
+    width: 16em;
+    height: 30em;
+    margin-right: 4em;
+  }
+
+  .doctor-avatar img {
+    margin-top: 4em;
+  }
+  .alll-cards {
+    padding-top: 5em;
+  }
+  .right-content {
+    width: 15em;
+    height: 30em;
+  }
+  .bt-health {
+    margin-top: 18em;
+  }
+  .health-text h1 {
+    font-weight: 900;
+    font-size: 1.5em;
+    padding-top: 3em;
+  }
+  .doctor-text {
+    font-weight: 900;
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .driver-form {
-    width: 100vw;
+  .forrm {
+    width: 15em;
+
+    margin-left: 1em;
+  }
+  .leftt-content {
+    width: 15em;
+    height: 30em;
+  }
+  .doctor-avatar img {
+    padding-bottom: 4em;
+
+    margin-left: 0.1em;
+  }
+
+  .alll-cards {
+    padding: 2em;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .doc-btn {
+    padding: 2px 30px;
+    margin-bottom: 4em;
+    margin-left: 1em;
+  }
+  .right-content .health-content {
+    width: 8em;
+
+    margin-left: 2em;
+  }
+  .health-content {
+    padding-right: 1em;
+  }
+  .doctor-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 1em;
   }
 }

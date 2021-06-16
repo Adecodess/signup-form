@@ -83,16 +83,16 @@
   background: #d4edda;
 }
 
-/* Pharmacist Form */
-.foorm {
+/* driver Form */
+
+.formmm {
   background: #fff;
-  max-width: 620px;
-  margin: 0 auto;
-  /* margin-bottom: rem; */
-  padding: 1rem 2rem;
+  width: 700px;
+  margin: 2rem auto;
   border-radius: 0.25rem;
+  padding: 5rem 0;
 }
-.foorm input {
+.formmm input {
   background: hsl(210, 36%, 96%);
   border-color: transparent;
   border-radius: 0.25rem;
@@ -102,40 +102,38 @@
   padding: 6px;
 }
 
-.foorm label {
+.formmm label {
   text-transform: capitalize;
   color: #222;
   font-size: 1rem;
   font-weight: 400;
 }
-.foorm-control {
+.form-controll {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.foorm input::placeholder {
+.formmm input::placeholder {
   text-transform: capitalize;
   color: hsl(210, 22%, 49%);
   font-size: 0.8rem;
 }
-.titleeeText {
+.formmm p {
   margin-bottom: 10px;
   color: hsl(209, 61%, 16%);
   letter-spacing: 2px;
   transition: all 0.3s linear;
   text-transform: capitalize;
-  font-size: 1em;
-  font-weight: 600;
   text-align: center;
 }
-.pa-btn {
+.driver-btn {
   display: inline-block;
   background: #222;
   color: #fff;
   border-color: transparent;
   margin-top: 1rem;
-  margin-left: 10em;
+  margin-left: 15em;
   letter-spacing: 0.1rem;
   padding: 0.15rem 0.25rem;
   text-transform: capitalize;
@@ -148,12 +146,13 @@
   text-transform: uppercase;
 }
 
-.pa-btn:hover {
+.driver-btn:hover {
   color: #222;
   background: #fff;
   letter-spacing: 4px;
 }
-.patient-content {
+
+.driver-content {
   display: flex;
   justify-content: space-between;
 }
@@ -286,26 +285,52 @@
   font-size: 1em;
 }
 
-/* section */
-.patient-form {
-  padding: 5rem 0;
-  margin: 0 auto;
-  width: 50vw;
-  margin-left: 5em;
-  /* height: 40vh; */
-}
-
 @media only screen and (max-width: 992px) {
   .main__cards {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 0;
   }
+  .driver-content {
+    height: 30em;
+    margin-top: 2em;
+  }
+  .formmm {
+    width: 22em;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .patient-form {
-    width: 50vw;
-    margin-right: 5em;
+  .driver-content {
+    height: 50em;
+    margin-top: 2em;
+  }
+  .formmm {
+    width: 15em;
+
+    margin-left: 1em;
+  }
+  .leftt-contennt {
+    width: 15em;
+    height: 30em;
+    margin-bottom: 2em;
+  }
+  .right-contennt {
+    margin-top: 3em;
+    height: 25em;
+    margin-left: 1em;
+  }
+  .driver-avatar img {
+    padding-right: 4em;
+  }
+  .dri-btn {
+    margin-right: 8em;
+    padding-left: 30px;
+  }
+  .driver-btn {
+    margin-left: 5em;
+  }
+  .healthh-btn {
+    margin-top: 0.3em;
   }
 }

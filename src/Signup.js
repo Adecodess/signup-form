@@ -14,7 +14,7 @@ const Signup = () => {
         <div className="avatar">
           <img
             src="https://www.globalcincinnati.org/wp-content/uploads/2017/10/icon_membership_individual.png"
-            alt="vatar"
+            alt="avatar"
           />
         </div>
         <div className="formm-control">

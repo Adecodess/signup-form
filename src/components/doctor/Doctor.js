@@ -55,7 +55,7 @@ const Doctor = () => {
     setAlert({ show, type, msg });
   };
   return (
-    <section className="pharma-container">
+    <section className="doctor-container">
       <div className="main__container">
         <div className="main__title">
           <img src={doctor} alt="hello" />
@@ -95,73 +95,117 @@ const Doctor = () => {
               <span className="font-bold text-title">340</span>
             </div>
           </div>
-
-          {/* <div className="card">
-            <i className="fa fa-thumbs-up fa-2x text-green"></i>
-            <div className="card_inner">
-              <p className="text-primary-p">Number of likes</p>
-              <span className="font-bold text-title">645</span>
-            </div>
-          </div> */}
         </div>
       </div>
-      <article className="article">
-        <p className="title">patient form</p>
-        <form className="form" onSubmit={handleSubmitt}>
-          {alert.show && <Alert {...alert} removeAlert={showAlert} />}
-          <div className="form-control">
-            <label htmlFor="Name">Name: </label>
-            <input
-              type="text"
-              placeholder="patient name"
-              id="PatientName"
-              name="PatientName"
-              required
-              value={people.PatientName}
-              onChange={handleChangee}
+
+      <div className="alll-cards">
+        <div className="cards">
+          <div className="cards1">
+            <div className="cards-text">
+              <h1>Patient History</h1>
+            </div>
+          </div>
+        </div>
+        <div className="cards">
+          <div className="cards2">
+            <div className="cards-text">
+              <h1>online appointment</h1>
+            </div>
+          </div>
+        </div>
+        <div className="cards">
+          <div className="cards3">
+            <div className="cards-text">
+              <h1>doctor's prescription & diagnosis</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="doctor-content">
+        <div className="right-content">
+          <div className="health-content">
+            <div className="health-text">
+              <h1>health tips</h1>
+              <div className="bt-health">
+                <button className="health-btn">post tips</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <article className="article">
+          <form className="forrm" onSubmit={handleSubmitt}>
+            <p className="tittlle">patient form</p>
+            {alert.show && <Alert {...alert} removeAlert={showAlert} />}
+            <div className="forrm-control">
+              <label htmlFor="Name">Name: </label>
+              <input
+                type="text"
+                placeholder="patient name"
+                id="PatientName"
+                name="PatientName"
+                required
+                value={people.PatientName}
+                onChange={handleChangee}
+              />
+            </div>
+            <div className="forrm-control">
+              <label htmlFor="Age">Age: </label>
+              <input
+                type="number"
+                placeholder="patient name"
+                id="PatientAge"
+                name="PatientAge"
+                required
+                value={people.PatientAge}
+                onChange={handleChangee}
+              />
+            </div>
+            <div className="forrm-control">
+              <label htmlFor="Problem">Problem: </label>
+              <input
+                type="text"
+                placeholder="patient problem"
+                id="PatientProblem"
+                name="PatientProblem"
+                required
+                value={people.PatientProblem}
+                onChange={handleChangee}
+              />
+            </div>
+            <div className="forrm-control">
+              <label htmlFor="Prescription">Diagnosis: </label>
+              <input
+                type="text"
+                placeholder="diagnosis"
+                id="PatientDiagnosis"
+                name="PatientDiagnosis"
+                required
+                value={people.PatientDiagnosis}
+                onChange={handleChangee}
+              />
+            </div>
+            <button className="doctor-btn" type="submit">
+              Submit
+            </button>
+          </form>
+        </article>
+        <article className="leftt-content">
+          <div className="doctor-avatar">
+            <img
+              src="https://www.globalcincinnati.org/wp-content/uploads/2017/10/icon_membership_individual.png"
+              alt="avatar"
             />
           </div>
-          <div className="form-control">
-            <label htmlFor="Age">Age: </label>
-            <input
-              type="number"
-              placeholder="patient name"
-              id="PatientAge"
-              name="PatientAge"
-              required
-              value={people.PatientAge}
-              onChange={handleChangee}
-            />
+          <div className="doctor-name">
+            <h1 className="doctor-text">Welcome doctor John</h1>
           </div>
-          <div className="form-control">
-            <label htmlFor="Problem">Problem: </label>
-            <input
-              type="text"
-              placeholder="patient problem"
-              id="PatientProblem"
-              name="PatientProblem"
-              required
-              value={people.PatientProblem}
-              onChange={handleChangee}
-            />
-          </div>
-          <div className="form-control">
-            <label htmlFor="Prescription">Diagnosis: </label>
-            <input
-              type="text"
-              placeholder="diagnosis"
-              id="PatientDiagnosis"
-              name="PatientDiagnosis"
-              required
-              value={people.PatientDiagnosis}
-              onChange={handleChangee}
-            />
-          </div>
-          <button className="pharma-btn" type="submit">
-            Submit
+          <button className="doc-btn" type="submit">
+            Log Out
           </button>
-        </form>
-      </article>
+        </article>
+      </section>
     </section>
   );
 };

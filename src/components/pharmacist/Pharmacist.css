@@ -1,7 +1,8 @@
-.pharma-container {
+.doctor-container {
   background: #f3f4f6;
   grid-area: main;
   overflow-y: auto;
+  /* height: 100%; */
 }
 
 .main-container {
@@ -87,8 +88,8 @@
 .form {
   background: #fff;
   max-width: 620px;
-  margin: 0 auto;
-  margin-bottom: rem;
+  /* margin: 0 auto; */
+  margin-bottom: 2rem;
   padding: 1rem 2rem;
   border-radius: 0.25rem;
 }
@@ -119,12 +120,13 @@
   color: hsl(210, 22%, 49%);
   font-size: 0.8rem;
 }
-.title {
-  margin-bottom: 10px;
+.pharma-title {
+  margin-top: 10px;
   color: hsl(209, 61%, 16%);
   letter-spacing: 2px;
   transition: all 0.3s linear;
   text-transform: capitalize;
+  text-align: center;
 }
 .pharma-btn {
   display: inline-block;
@@ -142,6 +144,7 @@
   border: 2px solid #222;
   font-size: 0.875rem;
   text-transform: uppercase;
+  margin-left: 10em;
 }
 
 .pharma-btn:hover {
@@ -151,23 +154,135 @@
 }
 
 /* section */
-.article {
-  padding: 5rem 0;
+/* .pharma-container {
+  padding: 1rem 0;
 
-  width: 100vw;
-  height: 40vh;
+  width: 100%;
+  height: 100%;
+} */
+
+.article {
+  margin-top: 5rem;
+}
+.pharma-content {
+  display: flex;
+  justify-content: space-between;
+}
+.left-content {
+  width: 40%;
+  height: 50%;
+  /* background: #155724; */
+  margin-top: 5em;
+  border-radius: 2px solid black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  border: 2px solid #222;
+}
+.pharma-avatar {
+  width: 50px;
+}
+.pharma-avatar img {
+  width: 15em;
+  height: auto;
+  margin-left: 8.5em;
+  padding-top: 1em;
+}
+.pharm-name {
+  text-align: center;
+}
+.pharm-text {
+  font-weight: 600;
+  font-size: 2em;
+  text-transform: capitalize;
+}
+.pharm-btn {
+  margin-left: 7em;
+
+  text-transform: capitalize;
+  background: #ff0157;
+  color: #111;
+  padding: 10px 25px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+.pharm-btn:hover {
+  letter-spacing: 6px;
+  background: grey;
+  color: #fff;
 }
 
-@media only screen and (max-width: 855px) {
+.all-cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1em;
+}
+.cards {
+  border: 1.5px solid #222;
+  padding: 8px;
+}
+.cards-text h1 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 992px) {
   .main__cards {
     grid-template-columns: 1fr;
     gap: 10px;
     margin-bottom: 0;
   }
+  .pharma-content {
+    height: 60em;
+    margin-top: 5em;
+  }
+  .form {
+    width: 30em;
+    height: 30em;
+  }
+  .pharm-btn {
+    margin-top: 2em;
+  }
+  .all-cards {
+    padding-top: 5em;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .article {
-    width: 95vw;
+  .pharma-avatar {
+    width: 50px;
+    /* position: relative; */
+  }
+  .pharma-avatar img {
+    width: 5em;
+    height: auto;
+    margin-left: 3em;
+    padding-top: 1em;
+  }
+  .left-content {
+    width: 40.5%;
+    height: 15em;
+  }
+  .form {
+    width: 250px;
+  }
+  .pharm-name {
+    text-align: center;
+  }
+  .pharm-text {
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+  .pharma-btn {
+    margin-left: 5em;
+  }
+  .pharm-btn {
+    margin-left: 4em;
+  }
+  .pharma-content {
+    height: 50em;
+    margin-top: 5em;
   }
 }
