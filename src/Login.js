@@ -39,7 +39,7 @@ const Login = () => {
         </div>
 
         <Link
-          to={userData.username && userData.password ? "/dashboard" : "/signup"}
+          to={userData.username && userData.password ? "/main" : "/signup"}
           className="log-btn"
         >
           <span>Already have an account? </span> Login
