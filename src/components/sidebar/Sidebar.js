@@ -24,19 +24,19 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <h1>ESH</h1>
         <div className="sidebar__link">
           <i className="fa fa-user-secret"></i>
-          <a href="#">Admin Management</a>
+          <a href="/doctor">Doctor</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-building-o"></i>
-          <a href="#">Company Management</a>
+          <a href="/patient">Patient</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-wrench"></i>
-          <a href="#">Warehouse</a>
+          <a href="/Driver">Driver</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
-          <a href="#">Contracts</a>
+          <a href="/pharmacist">Pharmacist</a>
         </div>
         <h2>Leave</h2>
         <div className="sidebar__link">

@@ -15,43 +15,21 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
         <i className="fa fa-bars"></i>
       </div>
       <div className="navbar__left">
-        <Link
-          to="/pharmacist"
-          // className={toggle === 2 ? "active_link" : ""}
-          // onClick={() => toggleTab(2)}
-        >
-          Pharmacist
-        </Link>
-        <Link
-          to="/doctor"
-          // className={"!/doctor" ? "active_link navbar__left" : "active_link"}
-          onClick={() => toggleTab(3)}
-        >
+        <Link to="/pharmacist">Pharmacist</Link>
+        <Link to="/doctor" onClick={() => toggleTab(3)}>
           Doctor
         </Link>
         <Link
-          to="/dashboard"
+          to="/main"
           onClick={() => toggleTab(1)}
           className={toggle === 1 ? "active_link" : ""}
         >
           Admin
         </Link>
 
-        <Link
-          to="/driver"
-          // className={toggle === 4 ? "active_link" : ""}
-          // onClick={() => toggleTab(4)}
-        >
-          Driver
-        </Link>
+        <Link to="/driver">Driver</Link>
 
-        <Link
-          to="/patient"
-          // className={toggle === 5 ? "active_link" : ""}
-          // onClick={() => toggleTab(5)}
-        >
-          Patient
-        </Link>
+        <Link to="/patient">Patient</Link>
       </div>
       <div className="navbar__right">
         <a href="#">

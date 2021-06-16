@@ -7,7 +7,6 @@ const useForm = (validate) => {
     password: "admin",
   });
 
-  // const navigation =()=>{
   const userData = {
     username: person.username,
     password: person.password,

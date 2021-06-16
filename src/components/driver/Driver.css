@@ -87,7 +87,7 @@
 
 .formmm {
   background: #fff;
-  width: 700px;
+  width: 620px;
   margin: 2rem auto;
   border-radius: 0.25rem;
   padding: 5rem 0;
@@ -155,9 +155,10 @@
 .driver-content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.leftt-contentt {
+.leftt-conteentt {
   width: 15em;
   height: 22em;
   margin-top: 5em;
@@ -199,11 +200,6 @@
   padding-top: 1em;
 }
 
-.doctor-text {
-  font-weight: 600;
-  font-size: 1em;
-  text-transform: capitalize;
-}
 .dri-btn {
   margin-left: 5em;
   text-transform: capitalize;
@@ -222,7 +218,7 @@
   letter-spacing: 4px;
 }
 
-.right-contennt {
+.right-conteennt {
   width: 15em;
   height: 22em;
 
@@ -233,11 +229,11 @@
   border: 2px solid #222;
   margin-left: 2em;
 }
-.healthh-content {
+.healthh-conteent {
   text-align: center;
 }
 
-.healthh-text h3 {
+.healthh-teext h3 {
   text-transform: capitalize;
   font-size: 1em;
   font-weight: 500;
@@ -245,7 +241,7 @@
   padding-top: 2em;
 }
 
-.healthh-text p {
+.healthh-teext p {
   text-transform: capitalize;
   font-size: 1em;
   font-weight: 400;
@@ -253,7 +249,7 @@
   padding-bottom: 5em;
 }
 
-.healthh-btn {
+.healthhh-btn {
   margin-top: 6em;
   text-transform: capitalize;
   background: #ff0157;
@@ -264,7 +260,7 @@
   cursor: pointer;
   text-align: center;
 }
-.healthh-btn:hover {
+.healthhh-btn:hover {
   letter-spacing: 6px;
   background: grey;
   color: #fff;
@@ -273,6 +269,7 @@
 .all-cardss {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   padding-top: 1em;
 }
 .cardss {
@@ -292,45 +289,58 @@
     margin-bottom: 0;
   }
   .driver-content {
-    height: 30em;
-    margin-top: 2em;
+    padding-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .formmm {
-    width: 22em;
+    width: 20em;
+    margin-right: 5em;
+  }
+  .driver-btn {
+    margin-left: 7em;
+  }
+  .all-cardss {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .driver-content {
-    height: 50em;
-    margin-top: 2em;
+  .driver-conteent {
+    padding-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 25em;
   }
   .formmm {
-    width: 15em;
+    width: 18em;
 
-    margin-left: 1em;
+    margin-left: 3em;
   }
-  .leftt-contennt {
+  .leftt-conteennt {
     width: 15em;
     height: 30em;
-    margin-bottom: 2em;
+    margin-left: 5em;
   }
-  .right-contennt {
+  .right-conteennt {
     margin-top: 3em;
     height: 25em;
-    margin-left: 1em;
+    margin-left: 4em;
   }
   .driver-avatar img {
-    padding-right: 4em;
+    padding-right: 1em;
   }
   .dri-btn {
     margin-right: 8em;
-    padding-left: 30px;
   }
   .driver-btn {
     margin-left: 5em;
   }
-  .healthh-btn {
-    margin-top: 0.3em;
+  .healthhh-btn {
+    margin-top: 5em;
   }
 }

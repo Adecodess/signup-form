@@ -1,8 +1,6 @@
 import "./Main.css";
 import hello from "../../assets/hello.png";
 import Chart from "../charts/Chart";
-import Navbar from "../../components/navbar/Navbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 
 const Main = () => {
   return (
@@ -19,7 +17,7 @@ const Main = () => {
           <div className="card">
             <i className="fa fa-user-o fa-2x text-lightblue"></i>
             <div className="card_inner">
-              <p className="text-primary-p">Number of Subscibers</p>
+              <p className="text-primary-p">Number of Patient</p>
               <span className="font-bold text-title">578</span>
             </div>
           </div>
@@ -27,7 +25,7 @@ const Main = () => {
           <div className="card">
             <i className="fa fa-calendar fa-2x text-red"></i>
             <div className="card_inner">
-              <p className="text-primary-p">Times of watching</p>
+              <p className="text-primary-p">Number of Drivers</p>
               <span className="font-bold text-title">2467</span>
             </div>
           </div>
@@ -35,7 +33,7 @@ const Main = () => {
           <div className="card">
             <i className="fa fa-video-camera fa-2x text-yellow"></i>
             <div className="card_inner">
-              <p className="text-primary-p">Number of videos</p>
+              <p className="text-primary-p">Number of Pharmacist</p>
               <span className="font-bold text-title">340</span>
             </div>
           </div>
@@ -43,7 +41,7 @@ const Main = () => {
           <div className="card">
             <i className="fa fa-thumbs-up fa-2x text-green"></i>
             <div className="card_inner">
-              <p className="text-primary-p">Number of likes</p>
+              <p className="text-primary-p">Number of doctors</p>
               <span className="font-bold text-title">645</span>
             </div>
           </div>
@@ -53,7 +51,7 @@ const Main = () => {
             <div className="charts__left__title">
               <div>
                 <h1>Daily Reports</h1>
-                <p>cupertino,carlifonia, USA</p>
+                <p>ES,HEALTHCRE Income</p>
               </div>
               <i className="fa fa-usd"></i>
             </div>
@@ -62,8 +60,8 @@ const Main = () => {
           <div className="charts__right">
             <div className="charts__right__title">
               <div>
-                <h1>Stats Reports</h1>
-                <p>cupertino,carlifonia, USA</p>
+                <h1>Patients Reports</h1>
+                <p>ES, Healthcare</p>
               </div>
               <i className="fa fa-use"></i>
             </div>

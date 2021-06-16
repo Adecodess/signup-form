@@ -156,6 +156,7 @@
 .patient-content {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .leftt-contentt {
@@ -169,43 +170,43 @@
   margin-left: 2em;
 }
 
-.driver-avatar {
+.patient-avatar {
   width: 20px;
 }
-.driver-avatar img {
+.patient-avatar img {
   width: 7em;
   height: auto;
   margin-left: 4em;
   padding-top: 1em;
 }
-.driver-name {
+.patient-name {
   text-align: center;
 }
-.driver-name h1 {
+.patient-name h1 {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 1em;
   padding-top: 1em;
 }
-.driver-name p {
+.patient-name p {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 1em;
   padding-top: 1em;
 }
-.driver-name h2 {
+.patient-name h2 {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 1em;
   padding-top: 1em;
 }
 
-.doctor-text {
+.patient-text {
   font-weight: 600;
   font-size: 1em;
   text-transform: capitalize;
 }
-.dri-btn {
+.pat-btn {
   margin-left: 5em;
   text-transform: capitalize;
   background: #ff0157;
@@ -275,6 +276,7 @@
   display: flex;
   justify-content: space-evenly;
   padding-top: 1em;
+  flex-wrap: wrap;
 }
 .cardss {
   border: 1.5px solid #222;
@@ -292,7 +294,6 @@
   margin: 0 auto;
   width: 50vw;
   margin-left: 5em;
-  /* height: 40vh; */
 }
 
 @media only screen and (max-width: 992px) {
@@ -301,11 +302,34 @@
     gap: 10px;
     margin-bottom: 0;
   }
+  .patient-content {
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+  }
+  .patient-content .leftt-contentt {
+    margin-left: 10em;
+  }
+  .patient-content .right-contennt {
+    margin-left: 10em;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .patient-form {
-    width: 50vw;
-    margin-right: 5em;
+    width: 50em;
+  }
+  .patient-content .leftt-contentt {
+    width: 50em;
+  }
+  .patient-content .right-contennt {
+    width: 50em;
+  }
+  .patient-avatar img {
+    margin-left: 6em;
+  }
+  .pat-btn {
+    margin-left: 8em;
   }
 }

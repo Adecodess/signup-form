@@ -83,8 +83,6 @@
   background: #d4edda;
 }
 
-/* Pharmacist Form */
-
 .forrm {
   background: #fff;
   max-width: 620px;
@@ -162,6 +160,7 @@
 
 .doctor-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -214,14 +213,13 @@
 .right-content {
   width: 15em;
   height: 22em;
-  /* background: #155724; */
+
   margin-top: 5em;
   border-radius: 2px solid black;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-color: transparent;
   border: 2px solid #222;
   margin-left: 2em;
-  /* margin: 5em auto; */
 }
 .health-content {
   display: flex;
@@ -243,7 +241,6 @@
 }
 
 .health-btn {
-  /* margin-left: 7em; */
   text-transform: capitalize;
   background: #ff0157;
   color: #111;
@@ -262,6 +259,7 @@
 .alll-cards {
   display: flex;
   justify-content: space-evenly;
+
   padding-top: 1em;
 }
 .cards {
@@ -280,21 +278,24 @@
     gap: 10px;
     margin-bottom: 0;
   }
+
+  .alll-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .doctor-content {
-    height: 40em;
-    margin-top: 5em;
+    display: flex;
+    flex-wrap: wrap;
   }
   .forrm {
     width: 22em;
-    /* height: 30em; */
+    margin-left: 12em;
   }
   .doc-btn {
-    margin-top: 12em;
+    margin-top: 15em;
   }
   .leftt-content {
-    width: 16em;
-    height: 30em;
-    margin-right: 4em;
+    margin-left: 15em;
   }
 
   .doctor-avatar img {
@@ -304,11 +305,10 @@
     padding-top: 5em;
   }
   .right-content {
-    width: 15em;
-    height: 30em;
+    margin-left: 15em;
   }
   .bt-health {
-    margin-top: 18em;
+    margin-top: 10em;
   }
   .health-text h1 {
     font-weight: 900;
@@ -319,22 +319,39 @@
     font-weight: 900;
     font-size: 1.5em;
   }
+  .doc-btn {
+    margin-top: 6em;
+    margin-left: 5em;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .forrm {
-    width: 15em;
+  .alll-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    margin-left: 1em;
+  .doctor-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .forrm {
+    width: 20em;
+    margin-left: 6em;
   }
   .leftt-content {
     width: 15em;
     height: 30em;
+    margin-left: 8em;
+  }
+  .right-content {
+    margin-left: 8em;
   }
   .doctor-avatar img {
     padding-bottom: 4em;
 
-    margin-left: 0.1em;
+    margin-left: 4em;
   }
 
   .alll-cards {
@@ -345,12 +362,12 @@
   .doc-btn {
     padding: 2px 30px;
     margin-bottom: 4em;
-    margin-left: 1em;
+    margin-right: 5em;
   }
   .right-content .health-content {
     width: 8em;
 
-    margin-left: 2em;
+    margin-left: 4em;
   }
   .health-content {
     padding-right: 1em;

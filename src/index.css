@@ -293,35 +293,6 @@ body {
     font-size: 20px;
     text-transform: capitalize;
   }
-
-  /* .login-form input {
-  background: hsl(210, 36%, 96%);
-  border-color: transparent;
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  margin-right: 10em;
-} */
-  /* .login-form-control {
-  margin: 0.5rem 0;
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  align-items: center;
-} */
-
-  /* .log-btn {
-  text-decoration: none;
-  color: #222;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  margin-top: 3em;
-  align-items: center;
-  text-transform: capitalize;
-} */
-
-  /* .log-btn:hover {
-  letter-spacing: 3px;
-  color: bisque;
-} */
 }
 
 @media only screen and (max-width: 978px) {

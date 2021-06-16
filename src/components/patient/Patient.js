@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../patient/Patient.css";
 import Alert from "../Alert/Alert";
+import Sidebar from "../sidebar/Sidebar";
+import Navbar from "../navbar/Navbar";
 
 const Patient = () => {
   const [people, setPeople] = useState({
@@ -63,6 +65,14 @@ const Patient = () => {
   const showAlert = (show = false, type = "", msg = "") => {
     setAlert({ show, type, msg });
   };
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSidebar = () => {
+    setSidebarOpen(true);
+  };
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
   return (
     <>
       <div className="main__title">
@@ -94,144 +104,149 @@ const Patient = () => {
           </div>
         </div>
       </div>
-      <section className="patient-content">
-        <article className="leftt-contentt">
-          <div className="driver-avatar">
-            <img
-              src="https://www.globalcincinnati.org/wp-content/uploads/2017/10/icon_membership_individual.png"
-              alt="avatar"
-            />
-          </div>
-          <div className="driver-name">
-            <h1>welcome james</h1>
-            <p>last appointment</p>
-            <h2>12-10-2021</h2>
-          </div>
-          <button className="dri-btn" type="submit">
-            Log Out
-          </button>
-        </article>
-        <article className="patient-form">
-          <form className="foorm" onSubmit={handleSubmitt}>
-            <p className="titleeeText"> new patient registration</p>
-            {alert.show && <Alert {...alert} removeAlert={showAlert} />}
-            <div className="foorm-control">
-              <label htmlFor="Name">Name: </label>
-              <input
-                type="text"
-                placeholder="patient name"
-                id="PatientName"
-                name="PatientName"
-                required
-                value={people.PatientName}
-                onChange={handleChangee}
-              />
-            </div>
-            <div className="foorm-control">
-              <label htmlFor="Age">Age: </label>
-              <input
-                type="number"
-                placeholder="patient Age"
-                id="PatientAge"
-                name="PatientAge"
-                required
-                value={people.PatientAge}
-                onChange={handleChangee}
-              />
-            </div>
-            <div className="foorm-control">
-              <label htmlFor="Problem">Problem: </label>
-              <input
-                type="text"
-                placeholder="patient problem"
-                id="PatientProblem"
-                name="PatientProblem"
-                required
-                value={people.PatientProblem}
-                onChange={handleChangee}
-              />
-            </div>
+      <div className="dash-container">
+        <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
 
-            <div className="foorm-control">
-              <label htmlFor="marital status">Marital Status: </label>
-              <input
-                type="text"
-                placeholder="marital status"
-                id="MaritalStatus"
-                name="MaritalStatus"
-                required
-                value={people.MaritalStatus}
-                onChange={handleChangee}
+        <section className="patient-content">
+          <article className="leftt-contentt">
+            <div className="patient-avatar">
+              <img
+                src="https://www.globalcincinnati.org/wp-content/uploads/2017/10/icon_membership_individual.png"
+                alt="avatar"
               />
             </div>
-            <div className="foorm-control">
-              <label htmlFor="D.O.B">D.O.B: </label>
-              <input
-                type="date"
-                placeholder="date of birth"
-                id="DOB"
-                name="DOB"
-                required
-                value={people.DOB}
-                onChange={handleChangee}
-              />
+            <div className="patient-name">
+              <h1>welcome james</h1>
+              <p>last appointment</p>
+              <h2>12-10-2021</h2>
             </div>
-            <div className="foorm-control">
-              <label htmlFor="sex">Sex: </label>
-              <input
-                type="text"
-                placeholder="Sex"
-                id="Sex"
-                name="Sex"
-                required
-                value={people.Sex}
-                onChange={handleChangee}
-              />
-            </div>
-            <div className="foorm-control">
-              <label htmlFor="Address">Address: </label>
-              <input
-                type="text"
-                placeholder="Address"
-                id="Address"
-                name="Address"
-                required
-                value={people.Address}
-                onChange={handleChangee}
-              />
-            </div>
-            <div className="foorm-control">
-              <label htmlFor="Registration Date">Registration Date: </label>
-              <input
-                type="date"
-                placeholder="Registration Date"
-                id="RegistrationDate"
-                name="RegistrationDate"
-                required
-                value={people.RegistrationDate}
-                onChange={handleChangee}
-              />
-            </div>
-            <button className="pa-btn" type="submit">
-              Submit
+            <button className="pat-btn" type="submit">
+              Log Out
             </button>
-          </form>
-        </article>
-        <div className="right-contennt">
-          <div className="healthh-content">
-            <div className="healthh-text">
-              <h3>health tips</h3>
-              <p>
-                the weather is hot to avoid heatstroke drin enough
-                water,exercise requalrly, take good fruits
-              </p>
-            </div>
-            <div className="hbtn">
-              <button className="healthh-btn">log out</button>
+          </article>
+          <article className="patient-form">
+            <form className="foorm" onSubmit={handleSubmitt}>
+              <p className="titleeeText"> new patient registration</p>
+              {alert.show && <Alert {...alert} removeAlert={showAlert} />}
+              <div className="foorm-control">
+                <label htmlFor="Name">Name: </label>
+                <input
+                  type="text"
+                  placeholder="patient name"
+                  id="PatientName"
+                  name="PatientName"
+                  required
+                  value={people.PatientName}
+                  onChange={handleChangee}
+                />
+              </div>
+              <div className="foorm-control">
+                <label htmlFor="Age">Age: </label>
+                <input
+                  type="number"
+                  placeholder="patient Age"
+                  id="PatientAge"
+                  name="PatientAge"
+                  required
+                  value={people.PatientAge}
+                  onChange={handleChangee}
+                />
+              </div>
+              <div className="foorm-control">
+                <label htmlFor="Problem">Problem: </label>
+                <input
+                  type="text"
+                  placeholder="patient problem"
+                  id="PatientProblem"
+                  name="PatientProblem"
+                  required
+                  value={people.PatientProblem}
+                  onChange={handleChangee}
+                />
+              </div>
+
+              <div className="foorm-control">
+                <label htmlFor="marital status">Marital Status: </label>
+                <input
+                  type="text"
+                  placeholder="marital status"
+                  id="MaritalStatus"
+                  name="MaritalStatus"
+                  required
+                  value={people.MaritalStatus}
+                  onChange={handleChangee}
+                />
+              </div>
+              <div className="foorm-control">
+                <label htmlFor="D.O.B">D.O.B: </label>
+                <input
+                  type="date"
+                  placeholder="date of birth"
+                  id="DOB"
+                  name="DOB"
+                  required
+                  value={people.DOB}
+                  onChange={handleChangee}
+                />
+              </div>
+              <div className="foorm-control">
+                <label htmlFor="sex">Sex: </label>
+                <input
+                  type="text"
+                  placeholder="Sex"
+                  id="Sex"
+                  name="Sex"
+                  required
+                  value={people.Sex}
+                  onChange={handleChangee}
+                />
+              </div>
+              <div className="foorm-control">
+                <label htmlFor="Address">Address: </label>
+                <input
+                  type="text"
+                  placeholder="Address"
+                  id="Address"
+                  name="Address"
+                  required
+                  value={people.Address}
+                  onChange={handleChangee}
+                />
+              </div>
+              <div className="foorm-control">
+                <label htmlFor="Registration Date">Registration Date: </label>
+                <input
+                  type="date"
+                  placeholder="Registration Date"
+                  id="RegistrationDate"
+                  name="RegistrationDate"
+                  required
+                  value={people.RegistrationDate}
+                  onChange={handleChangee}
+                />
+              </div>
+              <button className="pa-btn" type="submit">
+                Submit
+              </button>
+            </form>
+          </article>
+          <div className="right-contennt">
+            <div className="healthh-content">
+              <div className="healthh-text">
+                <h3>health tips</h3>
+                <p>
+                  the weather is hot to avoid heatstroke drin enough
+                  water,exercise requalrly, take good fruits
+                </p>
+              </div>
+              <div className="hbtn">
+                <button className="healthh-btn">log out</button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+      </div>
     </>
   );
 };
